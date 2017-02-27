@@ -4,7 +4,7 @@
     android:id="@+id/activity_home"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="edu.unmc.weathertime.edu.unmc.weathertime.activities.HomeActivity">
+    tools:context="com.toddashmore.weathertime.activities.HomeActivity">
 
     <android.support.v7.widget.ContentFrameLayout
         android:id="@+id/content_frame"

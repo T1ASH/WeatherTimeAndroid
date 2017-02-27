@@ -3,8 +3,9 @@ package com.toddashmore.weathertime.activities;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import edu.unmc.weathertime.R;
 import com.toddashmore.weathertime.fragments.ForecastMasterFragment;
+
+import edu.unmc.weathertime.R;
 
 import static com.toddashmore.weathertime.utilities.FragmentHelper.pushToFragmentManager;
 
