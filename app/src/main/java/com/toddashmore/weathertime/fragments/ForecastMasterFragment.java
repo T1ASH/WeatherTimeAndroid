@@ -127,7 +127,7 @@ public class ForecastMasterFragment extends Fragment implements View.OnClickList
      */
     public void updateCurrentConditions(Forecast weatherData) {
         // If the view doesn't exist, an error will occur because we are calling it below. Return to prevent this.
-        if (view == null) {
+        if (view == null || !isAdded()) {
             return;
         }
 
