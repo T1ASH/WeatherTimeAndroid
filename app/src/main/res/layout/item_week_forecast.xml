@@ -38,6 +38,7 @@
                 android:fontFamily="sans-serif-light"
                 android:text="day"
                 android:textSize="20sp"
+                android:layout_marginRight="20dp"
                 android:textStyle="bold" />
 
 
