@@ -27,7 +27,7 @@
                 android:layout_height="wrap_content"
                 custom:weatherIconColor="@android:color/darker_gray"
                 custom:weatherIconResource="@string/wi_day_sunny_overcast"
-                android:layout_marginRight="5dp"
+                android:layout_marginRight="8dp"
                 custom:weatherIconSize="26" />
 
             <TextView
