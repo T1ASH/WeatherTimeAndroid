@@ -14,7 +14,7 @@ import java.util.List;
 
 import com.toddashmore.weathertime.utilities.AndroidHelper;
 import com.toddashmore.weathertime.utilities.DateTimeHelper;
-import edu.unmc.weathertime.R;
+import com.toddashmore.weathertime.R;
 import com.toddashmore.weathertime.models.Datum;
 
 /**

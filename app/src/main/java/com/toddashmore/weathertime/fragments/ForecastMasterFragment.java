@@ -16,7 +16,7 @@ import com.toddashmore.weathertime.models.WeatherLocation;
 import com.toddashmore.weathertime.services.WeatherApiUtils;
 import com.toddashmore.weathertime.utilities.FragmentHelper;
 import com.toddashmore.weathertime.utilities.ItemClickSupport;
-import edu.unmc.weathertime.R;
+import com.toddashmore.weathertime.R;
 
 /**
  * This fragment shows the user the current conditions of their entered location.

@@ -6,7 +6,7 @@ import android.widget.TextView;
 
 import com.github.pwittchen.weathericonview.WeatherIconView;
 
-import edu.unmc.weathertime.R;
+import com.toddashmore.weathertime.R;
 
 public class ForecastMasterViewHolder extends RecyclerView.ViewHolder {
     TextView day;

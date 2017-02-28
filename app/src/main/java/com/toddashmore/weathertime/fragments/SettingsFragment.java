@@ -5,7 +5,7 @@ import android.preference.Preference;
 import android.preference.PreferenceFragment;
 
 import com.toddashmore.weathertime.models.WeatherLocation;
-import edu.unmc.weathertime.R;
+import com.toddashmore.weathertime.R;
 
 import static com.toddashmore.weathertime.utilities.SharedPreferencesHelper.CreateCityInSharedPrefs;
 

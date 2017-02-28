@@ -11,7 +11,7 @@ import android.widget.EditText;
 
 import com.toddashmore.weathertime.utilities.FragmentHelper;
 import com.toddashmore.weathertime.utilities.SharedPreferencesHelper;
-import edu.unmc.weathertime.R;
+import com.toddashmore.weathertime.R;
 
 /**
  * This DialogFragment is displayed when the user has not yet selected a location for weather data to be displayed.

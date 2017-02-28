@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import java.util.List;
 import java.util.Locale;
 
-import edu.unmc.weathertime.R;
+import com.toddashmore.weathertime.R;
 import com.toddashmore.weathertime.models.Datum;
 
 import static com.toddashmore.weathertime.utilities.AndroidHelper.getStringIdentifier;

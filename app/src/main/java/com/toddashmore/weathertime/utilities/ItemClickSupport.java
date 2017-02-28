@@ -3,7 +3,7 @@ package com.toddashmore.weathertime.utilities;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-import edu.unmc.weathertime.R;
+import com.toddashmore.weathertime.R;
 
 /*
   Source: http://www.littlerobots.nl/blog/Handle-Android-RecyclerView-Clicks/
