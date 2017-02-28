@@ -11,7 +11,7 @@ Any constructive criticise regarding the use of Android or Java is welcome.
 In order to make the project function properly, you must add a secrets.xml file within res/values.
 Then simply add the following.
 
-````xml
+````xmlw
 <string name="dark_sky_api">Your Darksky API Key</string>
 ````
 

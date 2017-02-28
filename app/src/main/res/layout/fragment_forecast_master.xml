@@ -209,7 +209,7 @@
         android:layout_marginLeft="16dp"
         custom:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="32dp"
         custom:layout_constraintTop_toBottomOf="@+id/linearLayout7" />
 
 </android.support.constraint.ConstraintLayout>
