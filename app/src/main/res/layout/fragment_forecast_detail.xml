@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/fragment_forecast_detail"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -17,7 +18,7 @@
         card_view:contentPaddingLeft="20dp"
         card_view:contentPaddingRight="20dp">
 
-        <LinearLayout
+        <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center_horizontal"
@@ -29,31 +30,59 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="10dp"
                 custom:weatherIconColor="@android:color/darker_gray"
-                custom:weatherIconSize="150" />
+                custom:weatherIconSize="150"
+                android:layout_marginStart="16dp"
+                card_view:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginEnd="16dp"
+                card_view:layout_constraintRight_toRightOf="parent"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                card_view:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/text_detail_date"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:paddingBottom="10dp"
                 android:text="Day"
                 android:textAlignment="center"
-                android:textSize="40sp" />
+                android:textSize="40sp"
+                android:layout_marginTop="8dp"
+                card_view:layout_constraintTop_toBottomOf="@+id/weather_icon_detail"
+                android:layout_marginStart="16dp"
+                card_view:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginEnd="16dp"
+                card_view:layout_constraintRight_toRightOf="parent"
+                android:layout_marginRight="16dp" />
 
             <TextView
                 android:id="@+id/text_detail_condition"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
                 android:paddingBottom="10dp"
                 android:text="Condition"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:layout_marginTop="8dp"
+                card_view:layout_constraintTop_toBottomOf="@+id/text_detail_date"
+                android:layout_marginStart="16dp"
+                card_view:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginEnd="16dp"
+                card_view:layout_constraintRight_toRightOf="parent"
+                android:layout_marginRight="16dp"
+                android:textAlignment="center" />
 
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="right">
+                android:gravity="right"
+                android:layout_marginTop="16dp"
+                card_view:layout_constraintLeft_toLeftOf="parent"
+                card_view:layout_constraintRight_toRightOf="parent"
+                card_view:layout_constraintTop_toBottomOf="@+id/text_detail_condition">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -94,6 +123,6 @@
             </LinearLayout>
 
 
-        </LinearLayout>
+        </android.support.constraint.ConstraintLayout>
     </android.support.v7.widget.CardView>
 </LinearLayout>
