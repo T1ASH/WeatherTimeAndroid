@@ -18,6 +18,7 @@ Then simply add the following.
 #### What's missing?
 - No tests have been implemented yet.
 - Weather data does not refresh on a regular basis.
+- Does not use ConstraintLayout yet. It may look odd on some devices.
 
 
 #### Screenshots
