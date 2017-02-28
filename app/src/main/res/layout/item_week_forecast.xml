@@ -12,7 +12,7 @@
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        card_view:cardElevation="1dp"
+        card_view:cardElevation="2dp"
         card_view:cardUseCompatPadding="true"
         card_view:contentPadding="15dp">
 
@@ -23,18 +23,18 @@
 
             <com.github.pwittchen.weathericonview.WeatherIconView
                 android:id="@+id/weather_icon_item"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 custom:weatherIconColor="@android:color/darker_gray"
                 custom:weatherIconResource="@string/wi_day_sunny_overcast"
+                android:layout_marginRight="5dp"
                 custom:weatherIconSize="26" />
 
             <TextView
                 android:id="@+id/tv_weekly_forecast_day"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="6"
+                android:layout_weight="1"
                 android:fontFamily="sans-serif-light"
                 android:text="day"
                 android:textSize="20sp"

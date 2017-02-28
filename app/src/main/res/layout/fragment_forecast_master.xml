@@ -1,168 +1,215 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/fragment_forecast_master"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <Button
         android:id="@+id/button_settings"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:layout_margin="15dp"
         android:alpha="0.15"
         android:background="@android:color/transparent"
         android:drawableRight="@drawable/ic_settings_black_36dp"
-        android:title="search" />
+        android:title="search"
+        android:layout_height="wrap_content"
+        android:elevation="0dp"
+        android:layout_marginEnd="16dp"
+        custom:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        custom:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/text_location_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Omaha, NE"
+        android:textAlignment="center"
+        android:textSize="24sp"
+
+        android:layout_marginTop="16dp"
+        custom:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="16dp"
+        custom:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        custom:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp" />
+
+
+    <TextView
+        android:id="@+id/text_current_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="72°"
+        android:textAlignment="center"
+        android:textSize="70sp"
+        custom:layout_constraintTop_toBottomOf="@+id/text_location_name"
+        android:layout_marginStart="16dp"
+        custom:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        custom:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp" />
+
+    <TextView
+        android:id="@+id/text_current_condition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mostly Cloudy With A Chance of Rain"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:layout_marginTop="8dp"
+        custom:layout_constraintTop_toBottomOf="@+id/text_current_temp"
+        android:layout_marginStart="16dp"
+        custom:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        custom:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp" />
+
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_width="352dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout7"
+        android:layout_marginTop="16dp"
+        custom:layout_constraintTop_toBottomOf="@+id/text_current_condition"
+        android:layout_marginStart="16dp"
+        custom:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        custom:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp">
 
         <LinearLayout
-            android:id="@+id/linear_layout_current_conditions"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="3"
-            android:clickable="true"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
             android:orientation="vertical"
-            android:padding="20dp">
+            android:id="@+id/linearLayout6"
+            tools:layout_editor_absoluteY="476dp"
+            tools:layout_editor_absoluteX="218dp">
 
-            <TextView
-                android:id="@+id/text_location_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-light"
+            <com.github.pwittchen.weathericonview.WeatherIconView
+                android:layout_width="wrap_content"
+                android:layout_height="0sp"
+                android:layout_weight="2"
                 android:textAlignment="center"
-                android:textSize="25sp" />
-
-
-            <TextView
-                android:id="@+id/text_current_temp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:textSize="70sp" />
+                custom:weatherIconColor="@android:color/darker_gray"
+                custom:weatherIconResource="@string/wi_raindrop"
+                custom:weatherIconSize="32" />
 
             <TextView
-                android:id="@+id/text_current_condition"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
+                android:id="@+id/text_current_precipitation"
+                android:layout_width="wrap_content"
+                android:layout_height="0sp"
+                android:layout_weight="1"
+                android:text="22%"
                 android:textAlignment="center"
                 android:textSize="20sp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="10sp">
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <com.github.pwittchen.weathericonview.WeatherIconView
-                        android:layout_width="wrap_content"
-                        android:layout_height="0sp"
-                        android:layout_weight="2"
-                        android:textAlignment="center"
-                        custom:weatherIconColor="@android:color/darker_gray"
-                        custom:weatherIconResource="@string/wi_raindrop"
-                        custom:weatherIconSize="32" />
-
-                    <TextView
-                        android:id="@+id/text_current_precipitation"
-                        android:layout_width="wrap_content"
-                        android:layout_height="0sp"
-                        android:layout_weight="1"
-                        android:textAlignment="center"
-                        android:textSize="20sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <com.github.pwittchen.weathericonview.WeatherIconView
-                        android:layout_width="wrap_content"
-                        android:layout_height="0sp"
-                        android:layout_weight="2"
-                        android:textAlignment="center"
-
-                        custom:weatherIconColor="@android:color/darker_gray"
-                        custom:weatherIconResource="@string/wi_thermometer"
-                        custom:weatherIconSize="32" />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="0sp"
-                        android:layout_weight="1"
-                        android:gravity="center">
-
-                        <TextView
-                            android:id="@+id/text_today_high"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginRight="5dp"
-                            android:textAlignment="center"
-                            android:textSize="20sp" />
-
-                        <TextView
-                            android:id="@+id/text_today_low"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:textAlignment="center"
-                            android:textColor="@android:color/darker_gray"
-                            android:textSize="20sp" />
-                    </LinearLayout>
-                </LinearLayout>
-
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <com.github.pwittchen.weathericonview.WeatherIconView
-                        android:layout_width="wrap_content"
-                        android:layout_height="0sp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_weight="2"
-                        android:textAlignment="center"
-
-                        custom:weatherIconColor="@android:color/darker_gray"
-                        custom:weatherIconResource="@string/wi_strong_wind"
-                        custom:weatherIconSize="32" />
-
-                    <TextView
-                        android:id="@+id/text_wind_speed"
-                        android:layout_width="wrap_content"
-                        android:layout_height="0sp"
-                        android:layout_weight="1"
-                        android:textAlignment="center"
-
-                        android:textSize="20sp" />
-                </LinearLayout>
-            </LinearLayout>
         </LinearLayout>
 
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/recycler_view_week_forecast"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="3" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.github.pwittchen.weathericonview.WeatherIconView
+                android:layout_width="wrap_content"
+                android:layout_height="0sp"
+                android:layout_weight="2"
+                android:textAlignment="center"
+
+                custom:weatherIconColor="@android:color/darker_gray"
+                custom:weatherIconResource="@string/wi_thermometer"
+                custom:weatherIconSize="32" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0sp"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/text_today_high"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:textAlignment="center"
+                    android:text="50"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/text_today_low"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center"
+                    android:text="80"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteY="485dp"
+            tools:layout_editor_absoluteX="96dp"
+            android:id="@+id/linearLayout4">
+
+            <com.github.pwittchen.weathericonview.WeatherIconView
+                android:layout_width="wrap_content"
+                android:layout_height="0sp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="2"
+                android:textAlignment="center"
+
+                custom:weatherIconColor="@android:color/darker_gray"
+                custom:weatherIconResource="@string/wi_strong_wind"
+                custom:weatherIconSize="32" />
+
+            <TextView
+                android:id="@+id/text_wind_speed"
+                android:layout_width="wrap_content"
+                android:layout_height="0sp"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="50mph"
+
+                android:textSize="20sp" />
+        </LinearLayout>
     </LinearLayout>
 
-</RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view_week_forecast"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:layout_marginEnd="16dp"
+        custom:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        custom:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        custom:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="8dp"
+        custom:layout_constraintTop_toBottomOf="@+id/linearLayout7" />
+
+</android.support.constraint.ConstraintLayout>
